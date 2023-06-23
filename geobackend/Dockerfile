@@ -10,4 +10,7 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-CMD ["bash", "django-start.sh"]
+RUN python3 manage.py migrate
+RUN python3 manage.py loadgeodata
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
