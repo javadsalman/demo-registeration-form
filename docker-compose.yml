@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  backend:
+    build: ./geobackend
+    image: geobackend
+    environment:
+      DJANGO_SUPERUSER_USERNAME: admin
+      DJANGO_SUPERUSER_PASSWORD: admin
+      DJANGO_SUPERUSER_EMAIL: admin@admin.com
+    ports:
+      - "8000:8000"
+  frontend:
+    build: .
+    image: register-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

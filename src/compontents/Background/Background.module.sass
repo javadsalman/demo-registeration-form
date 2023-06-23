@@ -1,0 +1,47 @@
+@mixin shape
+    width: 100%
+    position: absolute
+
+
+$edge: -7deg
+
+.ShapePre1
+    @include shape
+    background-color: #f6f5ff
+    top: 0
+    height: 200px
+
+.Shape1
+    @include shape
+    background-color: #f6f5ff
+    top: 0
+    height: 450px
+    transform: skewY($edge)
+
+
+.Shape2
+    @include shape
+    top: 385px
+    transform: skewY($edge)
+
+
+.Shape3
+    @include shape
+    top: 450px
+    transform: skewY($edge)
+
+
+.Shape4
+    @include shape
+    top: 321px
+    transform: skewY($edge)
+
+.Shape5
+    @include shape
+    top: 386px
+    transform: skewY($edge)
+
+.Shape6
+    @include shape
+    top: 450px
+    transform: skewY($edge)
